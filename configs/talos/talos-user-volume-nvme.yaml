@@ -1,0 +1,9 @@
+apiVersion: v1alpha1
+kind: UserVolumeConfig
+name: longhorn
+provisioning:
+    diskSelector:
+        match: disk.transport == "nvme" && !system_disk
+    minSize: 20GiB
+filesystem:
+    type: ext4
